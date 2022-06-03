@@ -28,9 +28,9 @@ public class FlightController {
 	@GetMapping(value="/flights")
 	Iterable<Flight> getAllFlightDetails()
 	{
-		service.getAllFlights().iterator().forEachRemaining(x->
-		System.out.println(x.getAirline().getAiraddress()));
-		
+//		service.getAllFlights().iterator().forEachRemaining(x->
+//		System.out.println(x.getAirline().getAiraddress()));
+//		
 		return service.getAllFlights();
 	}
 	
@@ -67,7 +67,7 @@ public class FlightController {
 		service.updateFlight(updateFlight);
 		return "Successfully updated";
 	}
-	@DeleteMapping(value="/flight/delete/{id}")
+	@DeleteMapping(value="/delete/{id}")
 	void deleteFlightById(@PathVariable Integer id)
 	{
 		service.deleteFlightById(id);

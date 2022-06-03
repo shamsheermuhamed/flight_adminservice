@@ -57,9 +57,9 @@ public class DiscountController {
 		repo.save(coupon);
 	}
 	
-	@DeleteMapping(value="/discount/delete/{id}")
-	void deleteCouponById(@PathVariable Integer id)
+	@DeleteMapping(value="/discounts/delete/{couponid}")
+	void deleteCouponById(@PathVariable Integer couponid)
 	{
-		service.deleteCouponById(id);
+		repo.deleteById(couponid);
 	}
 }
